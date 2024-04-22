@@ -1,0 +1,99 @@
+body{
+    background-color: rgb(208, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    min-height: 100vh;
+    margin: 0;
+}
+.coracao{
+    width: 100px;
+    height: 100px;  
+    background-color:#5e045e; 
+    transform: rotate(-45deg) scale(1);
+    animation: bater 1s linear infinite;
+}
+.coracao::after{
+    content: " ";
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color:#5e045e;  
+    position: absolute;
+    left: 0%;
+    top: -50%;
+    animation: bolinha 1s linear infinite;
+}
+
+.coracao::before{
+    content: " ";
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    background-color: #5e045e;  
+    position: absolute;
+    right: -50%;
+    top: 0%;
+    animation: bolinha 1s linear infinite;
+}
+
+
+@keyframes bater{
+    0% {
+        transform: rotate(-45deg) scale(1); 
+        background-color: rgb(255, 0, 255); 
+
+    }
+    25% {
+        transform: rotate(-45deg) scale(1.8); 
+        background-color: rgb(0, 255, 213); 
+      
+    }
+    50%  {
+        transform: rotate(-45deg) scale(0.5); 
+        background-color: rgb(255, 0, 255);  
+       
+    }
+    75%   {
+        transform: rotate(-45deg) scale(1.9); 
+        background-color: rgb(0, 255, 213); 
+      
+    }
+    80%    {
+        transform: rotate(-45deg) scale(1.9);
+        background-color: rgb(255, 0, 255);  
+    }
+}
+
+@keyframes bolinha{
+    0% {
+        transform: rotate(-45deg) scale(1); 
+        background-color:rgb(255, 0, 255); 
+    }
+    25% {
+        transform: rotate(-45deg) scale(1); 
+        background-color:rgb(0, 255, 213); 
+   
+    }
+    50%  {
+        transform: rotate(-45deg) scale(1); 
+        background-color: rgb(255, 0, 255); 
+       
+    }
+    75%   {
+        transform: rotate(-45deg) scale(1); 
+        background-color: rgb(0, 255, 213); 
+       
+    }
+    80%    {
+        transform: rotate(-45deg) scale(1);
+        background-color: rgb(255, 0, 255); 
+    }
+}
+
+h1{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: rgb(255, 0, 0);
+}
